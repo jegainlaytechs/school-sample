@@ -35,7 +35,6 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
   });
 
   const [errors, setErrors] = useState<{ [key: string]: string }>({});
-  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleChange = (
     e: React.ChangeEvent<
@@ -68,19 +67,14 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
       return;
     }
 
-    setIsSubmitting(true);
-
-    setTimeout(() => {
-      setIsSubmitting(false);
-      setFormData({
-        parentName: '',
-        phoneNumber: '',
-        childAge: '',
-        programInterest: 'Preschool Discoverers (2-3 Yrs)',
-        message: '',
-      });
-      onShowToast('Thank you! Your enquiry has been noted.');
-    }, 600);
+    setFormData({
+      parentName: '',
+      phoneNumber: '',
+      childAge: '',
+      programInterest: 'Preschool Discoverers (2-3 Yrs)',
+      message: '',
+    });
+    onShowToast('Thank you! Your enquiry has been noted.');
   };
 
   return (
@@ -341,22 +335,15 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
               {/* Submit Button */}
               <button
                 type="submit"
-                disabled={isSubmitting}
-                className="w-full bg-[#E86A33] hover:bg-[#D45823] text-white py-4 px-6 rounded-2xl font-extrabold text-base shadow-lg shadow-orange-500/25 transition-all flex items-center justify-center gap-2"
+                className="w-full bg-[#E86A33] hover:bg-[#D45823] text-white py-4 px-6 rounded-2xl font-extrabold text-base shadow-lg shadow-orange-500/25 hover:shadow-xl transition-all flex items-center justify-center gap-2"
               >
-                {isSubmitting ? (
-                  <span>Processing...</span>
-                ) : (
-                  <>
-                    <Send className="w-5 h-5" />
-                    <span>Submit Enquiry</span>
-                  </>
-                )}
+                <Send className="w-5 h-5" />
+                <span>Submit Enquiry</span>
               </button>
 
               <div className="flex items-center justify-center gap-2 text-xs text-[#3D2314]/50">
                 <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600" />
-                <span>Frontend validation enabled. No data sent to backend servers.</span>
+                <span>Instant confirmation notification.</span>
               </div>
             </form>
           </div>
