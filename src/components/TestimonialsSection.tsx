@@ -1,6 +1,6 @@
 import React from 'react';
 import { Star, Quote, Sparkles } from 'lucide-react';
-import { TESTIMONIALS } from '../data/schoolConfig';
+import { TESTIMONIALS, SCHOOL_DETAILS } from '../data/schoolConfig';
 
 export const TestimonialsSection: React.FC = () => {
   return (
@@ -16,7 +16,7 @@ export const TestimonialsSection: React.FC = () => {
             Loved by Parents, Adored by Children
           </h2>
           <p className="mt-4 text-base sm:text-lg text-[#3D2314]/75 leading-relaxed font-normal">
-            Read heartwarming stories from parents who entrusted their children’s early learning journeys to VERUM.
+            Read heartwarming stories from parents who entrusted their children’s early learning journeys to {SCHOOL_DETAILS.name}.
           </p>
         </div>
 

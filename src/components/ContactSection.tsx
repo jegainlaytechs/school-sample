@@ -183,7 +183,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
             <div className="bg-white rounded-3xl overflow-hidden border border-amber-900/10 shadow-md">
               <div className="relative h-48 bg-amber-50">
                 <iframe
-                  title="VERUM Preschool Location Map"
+                  title={`${SCHOOL_DETAILS.name} Preschool Location Map`}
                   src={SCHOOL_DETAILS.mapEmbedUrl}
                   className="w-full h-full border-0"
                   loading="lazy"

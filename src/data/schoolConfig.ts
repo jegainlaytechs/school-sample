@@ -12,7 +12,7 @@ import type {
 } from '../types';
 
 export const SCHOOL_DETAILS: SchoolDetails = {
-  name: 'VERUM',
+  name: 'Name',
   tagline: 'Where Little Minds Begin Big Journeys',
   subTagline:
     'A joyful and nurturing space where children learn, play, explore and grow with confidence in Chennai.',
@@ -539,7 +539,7 @@ export const TESTIMONIALS: Testimonial[] = [
     relation: 'Parents of Ananya',
     childProgram: 'Preschool Program',
     quote:
-      'VERUM has created such a warm and welcoming environment for our daughter. Within just three months, her vocabulary, confidence, and social habits improved remarkably!',
+      'The school has created such a warm and welcoming environment for our daughter. Within just three months, her vocabulary, confidence, and social habits improved remarkably!',
     rating: 5,
     avatar:
       'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&q=80',
@@ -550,7 +550,7 @@ export const TESTIMONIALS: Testimonial[] = [
     relation: 'Parents of Aarav',
     childProgram: 'Junior Kindergarten',
     quote:
-      'The teachers at VERUM are incredibly patient and caring. Aarav looks forward to going to school every single morning! The safety standards and clean campus give us complete peace of mind.',
+      'The teachers are incredibly patient and caring. Aarav looks forward to going to school every single morning! The safety standards and clean campus give us complete peace of mind.',
     rating: 5,
     avatar:
       'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80',
@@ -572,7 +572,7 @@ export const TESTIMONIALS: Testimonial[] = [
     relation: 'Parents of Rian',
     childProgram: 'Toddler Care',
     quote:
-      'Sending our 2-year-old was a huge step, but the VERUM team made the transition so smooth. The daily updates and personal care are priceless.',
+      'Sending our 2-year-old was a huge step, but the educators made the transition so smooth. The daily updates and personal care are priceless.',
     rating: 5,
     avatar:
       'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&q=80',

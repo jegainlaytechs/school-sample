@@ -10,7 +10,7 @@ import {
   Brush,
   Sparkles,
 } from 'lucide-react';
-import { FACILITIES } from '../data/schoolConfig';
+import { FACILITIES, SCHOOL_DETAILS } from '../data/schoolConfig';
 
 const facilityIconMap: Record<string, React.ElementType> = {
   Monitor,
@@ -37,7 +37,7 @@ export const FacilitiesSection: React.FC = () => {
             World-Class Facilities for Little Explorers
           </h2>
           <p className="mt-4 text-base sm:text-lg text-[#3D2314]/75 leading-relaxed font-normal">
-            Every square foot of VERUM is meticulously designed for maximum safety, sensory engagement, hygiene, and freedom of expression.
+            Every square foot of {SCHOOL_DETAILS.name} is meticulously designed for maximum safety, sensory engagement, hygiene, and freedom of expression.
           </p>
         </div>
 

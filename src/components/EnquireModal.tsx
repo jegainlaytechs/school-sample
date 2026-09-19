@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { X, Calendar, Send, CheckCircle2 } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
+import { SCHOOL_DETAILS } from '../data/schoolConfig';
+
 interface EnquireModalProps {
   isOpen: boolean;
   onClose: () => void;
@@ -104,7 +106,7 @@ export const EnquireModal: React.FC<EnquireModalProps> = ({
                     Book a School Visit
                   </h3>
                   <p className="text-xs text-[#3D2314]/70">
-                    Experience VERUM campus in Chennai
+                    Experience {SCHOOL_DETAILS.name} campus in Chennai
                   </p>
                 </div>
               </div>

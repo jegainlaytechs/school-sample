@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { BookOpen, Gamepad2, Compass, Sprout, Sparkles } from 'lucide-react';
-import { PHILOSOPHY } from '../data/schoolConfig';
+import { PHILOSOPHY, SCHOOL_DETAILS } from '../data/schoolConfig';
 
 const philosophyIcons: Record<string, React.ElementType> = {
   BookOpen,
@@ -25,7 +25,7 @@ export const PhilosophySection: React.FC = () => {
             Learn • Play • Explore • Grow
           </h2>
           <p className="mt-4 text-base sm:text-lg text-[#3D2314]/75 leading-relaxed font-normal">
-            Our four-stage early educational philosophy guides every activity, environment design, and interaction at VERUM.
+            Our four-stage early educational philosophy guides every activity, environment design, and interaction at {SCHOOL_DETAILS.name}.
           </p>
         </div>
 

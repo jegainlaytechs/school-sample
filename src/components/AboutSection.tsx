@@ -65,7 +65,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({
           <div className="lg:col-span-6 flex flex-col justify-center">
             <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-amber-100 text-amber-800 text-xs font-bold uppercase tracking-wider mb-4 w-max">
               <Sparkles className="w-3.5 h-3.5 text-amber-600" />
-              <span>About VERUM Preschool</span>
+              <span>About {SCHOOL_DETAILS.name} Preschool</span>
             </div>
 
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#3D2314] tracking-tight leading-tight mb-6">

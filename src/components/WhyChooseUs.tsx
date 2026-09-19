@@ -7,7 +7,7 @@ import {
   HeartHandshake,
   Sparkles,
 } from 'lucide-react';
-import { WHY_CHOOSE_US } from '../data/schoolConfig';
+import { WHY_CHOOSE_US, SCHOOL_DETAILS } from '../data/schoolConfig';
 
 const iconMap: Record<string, React.ElementType> = {
   ShieldCheck,
@@ -26,10 +26,10 @@ export const WhyChooseUs: React.FC = () => {
         <div className="text-center max-w-3xl mx-auto mb-16">
           <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-amber-100/80 text-amber-800 text-xs font-bold uppercase tracking-wider mb-3">
             <Sparkles className="w-3.5 h-3.5 text-amber-600" />
-            <span>The VERUM Advantage</span>
+            <span>The {SCHOOL_DETAILS.name} Advantage</span>
           </div>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-[#3D2314] tracking-tight">
-            Why Choose VERUM?
+            Why Choose {SCHOOL_DETAILS.name}?
           </h2>
           <p className="mt-4 text-base sm:text-lg text-[#3D2314]/75 leading-relaxed font-normal">
             We provide a warm, stimulating atmosphere where every child is inspired to discover their potential through structured play and caring guidance.
