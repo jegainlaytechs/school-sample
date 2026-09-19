@@ -1,14 +1,13 @@
 import React from 'react';
-import { Clock, CheckCircle2, ArrowRight, Sparkles } from 'lucide-react';
+import { Clock, CheckCircle2, PhoneCall, Sparkles } from 'lucide-react';
 import { PROGRAMS } from '../data/schoolConfig';
-import type { Program } from '../types';
 
 interface ProgramsSectionProps {
-  onSelectProgram: (program: Program) => void;
+  onContactClick: () => void;
 }
 
 export const ProgramsSection: React.FC<ProgramsSectionProps> = ({
-  onSelectProgram,
+  onContactClick,
 }) => {
   return (
     <section id="programs" className="py-16 md:py-24 bg-[#FAF5EE] relative">
@@ -91,11 +90,11 @@ export const ProgramsSection: React.FC<ProgramsSectionProps> = ({
               {/* Action Button */}
               <div className="p-6 pt-0">
                 <button
-                  onClick={() => onSelectProgram(prog)}
+                  onClick={onContactClick}
                   className="w-full bg-[#FAF5EE] hover:bg-[#E86A33] text-[#3D2314] hover:text-white py-3 px-4 rounded-2xl font-bold text-sm transition-all duration-200 flex items-center justify-center gap-2 group-hover:shadow-md"
                 >
-                  <span>Explore Program</span>
-                  <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+                  <PhoneCall className="w-4 h-4" />
+                  <span>Contact for Program Details</span>
                 </button>
               </div>
             </div>

@@ -17,11 +17,11 @@ const statIconMap: Record<string, React.ElementType> = {
 };
 
 interface AboutSectionProps {
-  onOpenEnquireModal: () => void;
+  onContactClick: () => void;
 }
 
 export const AboutSection: React.FC<AboutSectionProps> = ({
-  onOpenEnquireModal,
+  onContactClick,
 }) => {
   return (
     <section id="about" className="py-16 md:py-24 bg-white relative overflow-hidden">
@@ -104,10 +104,10 @@ export const AboutSection: React.FC<AboutSectionProps> = ({
             {/* Action CTA */}
             <div>
               <button
-                onClick={onOpenEnquireModal}
+                onClick={onContactClick}
                 className="bg-[#E86A33] hover:bg-[#D45823] text-white px-7 py-3.5 rounded-2xl font-bold text-sm shadow-md hover:shadow-xl transition-all"
               >
-                Schedule a Personal Tour
+                Contact School Desk
               </button>
             </div>
           </div>

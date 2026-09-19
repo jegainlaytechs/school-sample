@@ -1,14 +1,12 @@
 import React from 'react';
-import { Calendar, PhoneCall, Sparkles } from 'lucide-react';
+import { PhoneCall, Sparkles, Phone } from 'lucide-react';
 import { SCHOOL_DETAILS } from '../data/schoolConfig';
 
 interface CTASectionProps {
-  onOpenEnquireModal: () => void;
   onContactClick: () => void;
 }
 
 export const CTASection: React.FC<CTASectionProps> = ({
-  onOpenEnquireModal,
   onContactClick,
 }) => {
   return (
@@ -33,20 +31,20 @@ export const CTASection: React.FC<CTASectionProps> = ({
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
           <button
-            onClick={onOpenEnquireModal}
+            onClick={onContactClick}
             className="w-full sm:w-auto bg-[#E86A33] hover:bg-[#D45823] text-white px-8 py-4 rounded-2xl font-bold text-base shadow-xl shadow-orange-950/50 hover:shadow-2xl hover:-translate-y-0.5 transition-all flex items-center justify-center gap-3"
           >
-            <Calendar className="w-5 h-5" />
-            <span>Book a School Visit</span>
-          </button>
-
-          <button
-            onClick={onContactClick}
-            className="w-full sm:w-auto bg-white/10 hover:bg-white/20 text-white border border-white/20 px-8 py-4 rounded-2xl font-bold text-base transition-all flex items-center justify-center gap-2.5 backdrop-blur-xs"
-          >
-            <PhoneCall className="w-5 h-5 text-amber-300" />
+            <PhoneCall className="w-5 h-5" />
             <span>Contact Us</span>
           </button>
+
+          <a
+            href={`tel:${SCHOOL_DETAILS.mobile}`}
+            className="w-full sm:w-auto bg-white/10 hover:bg-white/20 text-white border border-white/20 px-8 py-4 rounded-2xl font-bold text-base transition-all flex items-center justify-center gap-2.5 backdrop-blur-xs"
+          >
+            <Phone className="w-5 h-5 text-amber-300" />
+            <span>Call Us Directly</span>
+          </a>
         </div>
       </div>
     </section>

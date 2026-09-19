@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { WhyChooseUs } from './components/WhyChooseUs';
@@ -13,27 +12,8 @@ import { TestimonialsSection } from './components/TestimonialsSection';
 import { CTASection } from './components/CTASection';
 import { ContactSection } from './components/ContactSection';
 import { Footer } from './components/Footer';
-import { EnquireModal } from './components/EnquireModal';
-import { Toast } from './components/Toast';
 
 export function App() {
-  const [toastMessage, setToastMessage] = useState('');
-  const [isToastOpen, setIsToastOpen] = useState(false);
-
-  const [isEnquireModalOpen, setIsEnquireModalOpen] = useState(false);
-  const [selectedProgramForModal, setSelectedProgramForModal] =
-    useState<string>('');
-
-  const showToast = (msg: string) => {
-    setToastMessage(msg);
-    setIsToastOpen(true);
-  };
-
-  const handleOpenEnquireModal = (programTitle?: string) => {
-    setSelectedProgramForModal(programTitle || '');
-    setIsEnquireModalOpen(true);
-  };
-
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
@@ -53,26 +33,24 @@ export function App() {
   return (
     <div className="min-h-screen bg-[#FDFBF7] text-[#3D2314] antialiased selection:bg-orange-200 selection:text-[#3D2314]">
       {/* Navigation Header */}
-      <Navbar onOpenEnquireModal={() => handleOpenEnquireModal()} />
+      <Navbar />
 
       {/* Main Content Layout */}
       <main>
         {/* 1. Hero Section */}
         <Hero
-          onOpenEnquireModal={() => handleOpenEnquireModal()}
           onExploreProgramsClick={() => scrollToSection('programs')}
+          onContactClick={() => scrollToSection('contact')}
         />
 
-        {/* 2. Why Choose VERUM Section */}
+        {/* 2. Why Choose Us Section */}
         <WhyChooseUs />
 
         {/* 3. About Us & Stats Section */}
-        <AboutSection onOpenEnquireModal={() => handleOpenEnquireModal()} />
+        <AboutSection onContactClick={() => scrollToSection('contact')} />
 
         {/* 4. Programs Section */}
-        <ProgramsSection
-          onSelectProgram={(program) => handleOpenEnquireModal(program.title)}
-        />
+        <ProgramsSection onContactClick={() => scrollToSection('contact')} />
 
         {/* 5. Learning Philosophy (Learn, Play, Explore, Grow) */}
         <PhilosophySection />
@@ -93,10 +71,7 @@ export function App() {
         <TestimonialsSection />
 
         {/* 11. Mid-Page Call To Action Banner */}
-        <CTASection
-          onOpenEnquireModal={() => handleOpenEnquireModal()}
-          onContactClick={() => scrollToSection('contact')}
-        />
+        <CTASection onContactClick={() => scrollToSection('contact')} />
 
         {/* 12. Contact Section */}
         <ContactSection />
@@ -104,20 +79,6 @@ export function App() {
 
       {/* Footer */}
       <Footer />
-
-      {/* Global Interactive Modals & Toast */}
-      <EnquireModal
-        isOpen={isEnquireModalOpen}
-        onClose={() => setIsEnquireModalOpen(false)}
-        onShowToast={showToast}
-        initialProgramTitle={selectedProgramForModal}
-      />
-
-      <Toast
-        message={toastMessage}
-        isOpen={isToastOpen}
-        onClose={() => setIsToastOpen(false)}
-      />
     </div>
   );
 }

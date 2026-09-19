@@ -1,7 +1,7 @@
 import React from 'react';
 import {
-  Calendar,
   Compass,
+  PhoneCall,
   ShieldCheck,
   Smile,
   GraduationCap,
@@ -13,13 +13,13 @@ import { motion } from 'framer-motion';
 import { SCHOOL_DETAILS } from '../data/schoolConfig';
 
 interface HeroProps {
-  onOpenEnquireModal: () => void;
   onExploreProgramsClick: () => void;
+  onContactClick: () => void;
 }
 
 export const Hero: React.FC<HeroProps> = ({
-  onOpenEnquireModal,
   onExploreProgramsClick,
+  onContactClick,
 }) => {
   return (
     <section
@@ -75,19 +75,19 @@ export const Hero: React.FC<HeroProps> = ({
             {/* Action Buttons */}
             <div className="flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto mb-10">
               <button
-                onClick={onOpenEnquireModal}
+                onClick={onExploreProgramsClick}
                 className="w-full sm:w-auto bg-[#E86A33] hover:bg-[#D45823] text-white px-8 py-4 rounded-2xl font-bold text-base shadow-xl shadow-orange-500/25 hover:shadow-2xl hover:shadow-orange-500/35 hover:-translate-y-0.5 transition-all flex items-center justify-center gap-3 group"
               >
-                <Calendar className="w-5 h-5 group-hover:scale-110 transition-transform" />
-                <span>Book a School Visit</span>
+                <Compass className="w-5 h-5 group-hover:rotate-45 transition-transform" />
+                <span>Explore Programs</span>
               </button>
 
               <button
-                onClick={onExploreProgramsClick}
+                onClick={onContactClick}
                 className="w-full sm:w-auto bg-white hover:bg-amber-50/80 text-[#3D2314] border-2 border-[#3D2314]/15 px-7 py-3.5 rounded-2xl font-bold text-base shadow-sm hover:border-[#E86A33] hover:text-[#E86A33] transition-all flex items-center justify-center gap-2.5"
               >
-                <Compass className="w-5 h-5" />
-                <span>Explore Programs</span>
+                <PhoneCall className="w-5 h-5" />
+                <span>Contact Us</span>
               </button>
             </div>
 
@@ -137,7 +137,7 @@ export const Hero: React.FC<HeroProps> = ({
               <div className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-white">
                 <img
                   src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?auto=format&fit=crop&w=1000&q=80"
-                  alt="Happy children learning and playing at VERUM Preschool"
+                  alt={`Happy children learning and playing at ${SCHOOL_DETAILS.name} Preschool`}
                   className="w-full h-[400px] sm:h-[460px] object-cover hover:scale-105 transition-transform duration-700"
                 />
 
