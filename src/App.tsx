@@ -98,8 +98,8 @@ export function App() {
           onContactClick={() => scrollToSection('contact')}
         />
 
-        {/* 12. Contact Section & Form */}
-        <ContactSection onShowToast={showToast} />
+        {/* 12. Contact Section */}
+        <ContactSection />
       </main>
 
       {/* Footer */}
